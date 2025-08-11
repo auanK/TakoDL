@@ -1,0 +1,19 @@
+{
+  "name": "nova-pasta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "inquirer": "^9",
+    "archiver": "^6",
+    "pdfkit": "^0.15",
+    "image-size": "^1.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
