@@ -1,5 +1,8 @@
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { setDefaultResultOrder } from 'node:dns';
+
+setDefaultResultOrder('ipv4first');
 
 import * as api from './api/mangadex.js';
 import * as fmt from './names.js';
@@ -52,7 +55,7 @@ async function main() {
     const language = await cli.chooseLanguage(langs);
 
     const chaps = (await api.listChaps(manga.id, language)).sort(chapterNumSort);
-
+    
     const outDir = join(DOWNLOAD_DIR, name);
     files.mkdirs(outDir);
 
